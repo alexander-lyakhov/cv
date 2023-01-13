@@ -32,6 +32,11 @@ section {
 
 section {
   .job {
+    // background: #f0f0f0;
+    // border-bottom: 1px solid #a0a0a0;
+    box-sizing: content-box;
+    // border: 2px solid #fff;
+    // outline: 2px solid $vue-blue;
     width: 100%;
     margin-top: 1rem;
 
@@ -48,24 +53,25 @@ section {
       padding: 2px 2px 2px .5rem;
 
       .interval {
-        // font: 1rem "lucida console";
-        font-size: .875rem;
+        font: 1rem verdana, "lucida console";
+        // font-size: 15px;
         font-weight: bold;
-        color: #000;
-        background: #fff;
+        color: #fff;
+        // background: #fff;
+        background: $vue-green;
+        text-shadow: 1px 1px 1px #000;
         display: flex;
         align-items: center;
         height: 100%;
         padding: 0 .5rem;
-        float: right;
         position: relative;
 
         &:before {
           content: '';
           border-left: 10px solid transparent;
-          border-right: 10px solid #fff;
+          border-right: 10px solid $vue-green;
           border-top: 22px solid transparent;
-          border-bottom: 22px solid #fff;
+          border-bottom: 22px solid $vue-green;
           display: block;
           position: absolute;
           left: -20px;
@@ -81,7 +87,8 @@ section {
       border-bottom: 2px solid $vue-green;
       // height: 2rem;
       // line-height: 2rem;
-      padding: 0.5rem .5rem;
+      margin: 0 .5rem;
+      padding: 0.5rem 0rem;
     }
 
     h3 {
