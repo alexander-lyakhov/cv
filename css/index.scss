@@ -17,7 +17,7 @@ main {
   max-width: 960px;
   min-height: 100vh;
   margin: auto;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 2.5rem;
 }
 
 h2 {
@@ -25,13 +25,20 @@ h2 {
   // background: #e0e0e0;
 
   &:not(first-child) {
-    margin: 2rem 0 1rem;
+    margin: 3rem 0 1rem;
   }
 }
 
 h3 {
   font-weight: bold;
   margin-top: .75rem;
+}
+
+p {
+  // background: #f0f0f0;
+  line-height: 1.5;
+  // margin-left: .5rem;;
+  padding: 0.25rem 1.5rem;
 }
 
 .interval-green {
@@ -72,13 +79,13 @@ h3 {
 
   li {
     // color: #fff;
-    // background: $vue-blue;
+    // background: #f0e0c0;
     border: 1px solid #808080;
     border-radius: 4px;
     box-shadow: 2px 2px 2px #00000040;
     display: block;
     margin: .25rem .25rem 0 0;
-    padding: 0.25rem .5rem;
+    padding: 0.375rem .5rem;
   }
 }
 
