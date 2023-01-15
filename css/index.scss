@@ -1,7 +1,45 @@
 ﻿$vue-blue: #35495e;
 $vue-green: #41b883;
-$section-background: lighten($vue-blue, 62%);
-$section-border-color: $vue-blue;
+$section-background: #e8e8e8;//lighten($vue-blue, 62%);
+$section-border-color: #a0a0a0;//$vue-blue;
+
+.gray-tone {
+  background: #e8e8e8;
+  border: 1px solid #a0a0a0;
+}
+
+.blue-tone {
+  background: lighten($vue-blue, 62%);
+  border: 2px solid $vue-blue;
+}
+
+.interval-green {
+  font: 1rem verdana, "lucida console";
+  font-weight: bold;
+  color: #fff;
+  background: $vue-green;
+  text-shadow: 1px 1px 1px #00000080;
+
+  &:before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid $vue-green;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid $vue-green;
+  }
+}
+
+.interval-white {
+  font: 1rem verdana, "lucida console";
+  color: #000;
+  background: #fff;
+
+  &:before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid #fff;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -57,43 +95,13 @@ h3 {
 }
 
 p {
-  // background: #f0f0f0;
   line-height: 1.5;
-  // margin-left: .5rem;;
   padding: 0.25rem 1.5rem;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.interval-green {
-  font: 1rem verdana, "lucida console";
-  font-weight: bold;
-  color: #fff;
-  background: $vue-green;
-  text-shadow: 1px 1px 1px #00000080;
-
-  &:before {
-    border-left: 10px solid transparent;
-    border-right: 10px solid $vue-green;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid $vue-green;
-  }
-}
-
-.interval-white {
-  font: 1rem verdana, "lucida console";
-  color: #000;
-  background: #fff;
-
-  &:before {
-    border-left: 10px solid transparent;
-    border-right: 10px solid #fff;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid #fff;
-  }
 }
 
 .chips {
@@ -105,7 +113,7 @@ a {
 
   li {
     background: #fff;
-    border: 1px solid $vue-blue;
+    border: 1px solid #808080;
     border-radius: 4px;
     box-shadow: 2px 2px 2px #00000040;
     display: block;
@@ -115,8 +123,7 @@ a {
 }
 
 section {
-  background: $section-background;
-  border: 2px solid $section-border-color;
+  @extend .gray-tone;
   border-radius: 6px;
   margin: 1rem 0;
   padding: 1rem;
@@ -163,11 +170,6 @@ section {
 
     h3 {
       padding: 0 .5rem;
-    }
-
-    p {
-      line-height: 1.5;
-      padding: 0.25rem 1.5rem;
     }
 
     ul {
