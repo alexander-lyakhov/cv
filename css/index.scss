@@ -14,6 +14,7 @@ html, body {
 
 main {
   background: #fff;
+  min-width: 320px;
   max-width: 960px;
   min-height: 100vh;
   margin: auto;
@@ -28,8 +29,8 @@ header {
   padding: 2rem 0 2rem;
 
   .title {
-      font: 1.25rem verdana;
-      border-bottom: 1px solid $vue-green;//#e0e0e0;
+    font: 1.25rem verdana;
+    border-bottom: 1px solid $vue-green;
     padding: .75rem 0;
     letter-spacing: 8px;
     text-transform: uppercase;
@@ -42,8 +43,6 @@ header {
 
 h2 {
   font: 1.5rem verdana;
-  // background: #e0e0e0;
-  // margin: 3rem 0 1rem;
 
   &:not(first-child) {
     margin: 0.5rem 0 1rem;
@@ -60,6 +59,11 @@ p {
   line-height: 1.5;
   // margin-left: .5rem;;
   padding: 0.25rem 1.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .interval-green {
@@ -201,11 +205,87 @@ section {
       }
     }
   }
+
+  &.contacts {
+
+    & > div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: .5rem;
+    }
+
+    .item {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      height: 2rem;
+
+      &-icon {
+        background: $vue-blue;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.25rem;
+        height: 2rem;
+      }
+
+      svg {
+        display: block;
+
+        path {
+          color: #fff;
+          fill: #fff;
+        }
+      }
+
+      span, a {
+        border: 1px solid #a0a0a0;
+        border-left: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 .5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: .875rem;
+  }
+
+  section {
+    &.contacts {
+      & > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+      }
+    }
+
+    .job-title {
+      .interval {
+        &:before {
+          border-left: 10px solid transparent;
+          border-right: 10px solid #fff;
+          border-top: 18px solid transparent;
+          border-bottom: 18px solid #fff;
+        }
+      }
+    }
+  }
 }
 
 @media print {
-  html, body, main {
+  html, body {
     background: #fff;
+    width: 100%;
+  }
+
+  main {
     width: 100%;
   }
 }
