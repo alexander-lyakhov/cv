@@ -6,11 +6,18 @@ $section-border-color: #a0a0a0;//$vue-blue;
 .gray-tone {
   background: #f0f0f0;
   border: 1px solid #a0a0a0;
+  padding: 1rem;
 }
 
 .blue-tone {
   background: lighten($vue-blue, 62%);
   border: 2px solid $vue-blue;
+  padding: 1rem;
+}
+
+.blank-tone {
+  background: #fff;
+  border: none;
 }
 
 .interval-green {
@@ -126,7 +133,7 @@ section {
   @extend .gray-tone;
   border-radius: 6px;
   margin: 1rem 0;
-  padding: 1rem;
+  // padding: 1rem;
 
   .job {
     box-sizing: content-box;
@@ -228,7 +235,7 @@ section {
       }
 
       span, a {
-        border: 1px solid $vue-blue;
+        border: 1px solid #a0a0a0;
         border-left: none;
         display: flex;
         align-items: center;
@@ -248,9 +255,7 @@ section {
   section {
     &.contacts {
       & > div {
-        display: grid;
         grid-template-columns: 1fr;
-        grid-gap: .5rem;
       }
     }
 
@@ -276,8 +281,18 @@ section {
   main {
     width: 100%;
   }
+  
+  .sollve, .ciklum, .education {
+    page-break-before: always;
+  }
+  
+  section {
+    // border: none;
 
-  .experience, .epam-2, .sitecore {
-    page-break-after: always;
+    &.contacts {
+      & > div {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }
