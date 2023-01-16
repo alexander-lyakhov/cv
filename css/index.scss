@@ -4,7 +4,7 @@ $section-background: #e8e8e8;//lighten($vue-blue, 62%);
 $section-border-color: #a0a0a0;//$vue-blue;
 
 .gray-tone {
-  background: #e8e8e8;
+  background: #f0f0f0;
   border: 1px solid #a0a0a0;
 }
 
@@ -275,5 +275,9 @@ section {
 
   main {
     width: 100%;
+  }
+
+  .experience, .epam-2, .sitecore {
+    page-break-after: always;
   }
 }
