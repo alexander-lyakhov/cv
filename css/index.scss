@@ -146,6 +146,10 @@ section {
 
   &.skills {
     margin: 0;
+
+    & ul {
+      margin: 0 0 0 1rem;
+    }
   }
 
   .job {
