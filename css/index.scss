@@ -106,7 +106,7 @@ h2 {
 
 h3 {
   font-weight: bold;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 p {
@@ -142,15 +142,8 @@ a {
 
 section {
   border-radius: 6px;
-  margin: 3rem 0;
-
-  &.skills {
-    margin: 0;
-
-    & ul {
-      margin: 0 0 0 1rem;
-    }
-  }
+  margin: 1rem 0;
+  padding: 1rem;
 
   .job {
     // box-sizing: content-box;
@@ -191,17 +184,18 @@ section {
 
     &-subtitle {
       font-size: 1rem;
-      color: #404040;
-      background: #e0e0e0;
-      padding: .75rem 1rem;
+      font-weight: bold;
+      color: #000;
+      border-bottom: 2px solid $vue-green;
+      padding: .75rem .5rem;
     }
 
     &-details {
       padding: 1rem 1rem;
 
-      h3 {
-        margin: .5rem 0 0;
-      }
+    h3 {
+      padding: 0 .5rem;
+    }
 
       ul {
         padding: 0.25rem 1.25rem;
@@ -230,9 +224,7 @@ section {
       background: #e0e0e0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: .5rem;
-      margin-top: .5rem;
-      padding: .75rem;
+      grid-gap: .5rem .75rem;
     }
 
     .item {
@@ -241,15 +233,15 @@ section {
       box-sizing: content-box;
       display: flex;
       align-items: center;
-      height: 32px;
+      height: 40px;
 
       &-icon {
         background: $vue-blue;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 36px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
       }
 
       svg {
@@ -262,13 +254,13 @@ section {
       }
 
       span, a {
-        border: 1px solid $vue-blue;
+        border: 1px solid #c0c0c0;
+        border-left: none;
         display: flex;
         align-items: center;
         width: 100%;
         height: 100%;
-        margin-left: 1px;
-        padding: 0 .5rem;
+        padding: 0 .75rem;
       }
     }
   }
@@ -309,7 +301,7 @@ section {
     width: 100%;
   }
   
-  .toshiba, .sollve, .sitecore, .soft-ukraine {
+  .ym, .solvve, .ciklum, .contacts {
     page-break-before: always;
   }
   
